@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  padding: 14px 9px;
+  padding: 12px 9px;
 
   font-weight: 400;
   font-size: 13px;
@@ -26,6 +26,14 @@
     border: 1px solid $color-dolphin;
     background-color: $color-default-white;
     color: $color-black-russian-2;
+  }
+
+  &--big {
+    padding: 14px 10px;
+
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
   }
 
   @include hover-focus {

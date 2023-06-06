@@ -1,0 +1,81 @@
+.custom-input {
+  width: 100%;
+
+  &--upload {
+    .custom-input__label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 10px;
+
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      text-transform: uppercase;
+
+      border: 2px solid $color-summer-sky-2;
+      border-radius: 3px;
+      background-color: $color-default-white;
+      color: $color-jaguar;
+
+      transition: opacity $trans-default;
+
+      cursor: pointer;
+
+      @include hover {
+        opacity: 0.8;
+      }
+    }
+
+    svg {
+      width: 18px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    input {
+      clip: rect(0 0 0 0);
+
+      height: 1px;
+      margin: -1px;
+      position: absolute;
+
+      width: 1px;
+    }
+  }
+
+  label {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px 10px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
+    border: 1px solid $color-default-white;
+    border-radius: 3px;
+    background-color: rgba($color-default-white, 0.85);
+    color: $color-jaguar;
+
+    transition: opacity $trans-default;
+
+    outline: 0;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+
+      color: $color-jaguar;
+    }
+
+    @include hover {
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,152 @@
+.custom-select {
+  position: relative;
+  width: 100%;
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 12px 10px;
+
+    border: 1px solid $color-default-white;
+    border-radius: 3px;
+    background-color: rgba($color-default-white, 0.85);
+
+    transition: border $trans-default, border-radius $trans-default, background-color $trans-default;
+
+    cursor: pointer;
+  }
+
+  &__text {
+    display: block;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: $color-jaguar;
+
+    transition: color $trans-default;
+  }
+
+  &__icon {
+    transition: transform $trans-default;
+
+    svg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 20px;
+      height: 20px;
+
+      color: $color-default-black;
+
+      transition: color $trans-default;
+    }
+  }
+
+  &__dropdown {
+    z-index: 20;
+
+    position: absolute;
+    display: none;
+
+    top: 100%;
+
+    width: 100%;
+
+    border: 1px solid $color-blue-zodiac;
+    border-radius: 3px;
+    background-color: rgba($color-jaguar, 0.9);
+
+    transition: opacity $trans-default, visibility $trans-default;
+
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__list {
+    width: 100%;
+    max-height: 180px;
+    margin: 0;
+    padding: 4px 10px;
+    overflow-y: auto;
+
+    border-top: 2px solid $color-transparent;
+    border-right: 4px solid $color-transparent;
+    border-bottom: 2px solid $color-transparent;
+
+    list-style: none;
+
+    scrollbar-width: thin;
+    scrollbar-color: $color-summer-sky-2 $color-blue-zodiac;
+
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 3px;
+      background-color: $color-blue-zodiac;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background-color: $color-summer-sky-2;
+    }
+  }
+
+  &__item {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+
+    color: $color-default-white;
+
+    cursor: pointer;
+
+    &.is-active {
+      color: $color-summer-sky-3;
+    }
+  }
+
+  &.is-open {
+    .custom-select__button {
+      border: 1px solid rgba($color-blue-zodiac, 0.85);
+      border-radius: 3px 3px 0 0;
+      background-color: rgba($color-blue-zodiac, 0.85);
+    }
+
+    .custom-select__text {
+      color: $color-default-white;
+    }
+
+    .custom-select__dropdown {
+      display: block;
+
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .custom-select__icon {
+      transform: rotate(180deg) translateZ(0);
+
+      svg {
+        color: $color-default-white;
+      }
+    }
+  }
+
+  input {
+    clip: rect(0 0 0 0);
+
+    height: 1px;
+    margin: -1px;
+    position: absolute;
+
+    width: 1px;
+  }
+}
