@@ -30,6 +30,11 @@
     @include vp-1023 {
       margin-bottom: 20px;
     }
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 15px;
+    }
   }
 
   &__list {
