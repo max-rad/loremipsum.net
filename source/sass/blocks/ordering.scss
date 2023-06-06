@@ -242,7 +242,7 @@
     column-gap: 30px;
     row-gap: 30px;
 
-    margin-bottom: 50px;
+    margin-bottom: 34px;
 
     @include vp-1023 {
       grid-template-columns: 1fr 1fr;
@@ -348,6 +348,6 @@
   &__button {
     width: 100%;
     max-width: 370px;
-    margin: 0 auto;
+    margin: 16px auto 0;
   }
 }

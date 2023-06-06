@@ -1044,10 +1044,12 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  margin-top: -16px;
 }
 
 .intro__button {
   width: 183px;
+  margin-top: 16px;
   margin-right: 30px;
 }
 
@@ -1231,7 +1233,7 @@ button,
   -moz-column-gap: 30px;
   column-gap: 30px;
   row-gap: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 34px;
 }
 
 .ordering__range-slider {
@@ -1313,7 +1315,7 @@ button,
 .ordering__button {
   width: 100%;
   max-width: 370px;
-  margin: 0 auto;
+  margin: 16px auto 0;
 }
 
 .custom-select {
